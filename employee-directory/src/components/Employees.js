@@ -4,18 +4,24 @@ import API from "./utils/API";
 
 class Employees extends Component {
     state = {
+        people:[]
     }
 
     componentDidMount() {
-        API.getUsers().then(function(results) { console.log(results) });
-    }
+        API.getUsers()
+        .then(res => {
+            const people = res.data.results;
+            this.setState({ people });
+            console.log(people)
+          })
+      }
 
     render() {
         // this.state.users
-
         return (
-            <p>test</p>
-            // <EmployeeCard employee={employee} />
+            <ul>
+            { this.state.people.map(people => <li>{people.name.first}</li>)}
+          </ul>
         )
     }
 }
