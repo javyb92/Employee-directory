@@ -1,14 +1,20 @@
 import React from 'react';
-import './App.css';
-import EmployeeCard from "./components/EmployeeCard"
-import Jumbotron from "./components/Jumbotron"
+// import EmployeeCard from "./components/EmployeeCard/EmployeeCard"
+import Jumbotron from "./components/Jumbotron/Jumbotron"
+import Navbar from "./components/Navbar/Navbar"
+import Wrapper from "./components/Wrapper/Wrapper"
+import Employees from "./components/Employees"
+
+
 
 function App() {
   return (
-    <div className="App">
+    <Wrapper>
       <Jumbotron />
-      <EmployeeCard />
-    </div>
+      <Navbar />
+      <Employees />
+    </Wrapper>
+
   );
 }
 
