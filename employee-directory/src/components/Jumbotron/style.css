@@ -1,4 +1,7 @@
 .jumbotron{
 
-    background-color: aqua;
+    background-color: rgb(39, 86, 144);
+    box-shadow: rgba(192, 192, 192, 0.755) 3px 5px;
+    color: white;
+
 }

@@ -1,5 +1,10 @@
 .employeeCard{
-    background-color: cadetblue;
-    border: 2px solid black;
-    margin: 5px
+     margin: 30px;
+     box-shadow: rgba(192, 192, 192, 0.755) 3px 5px;
+
+}
+
+img{
+    height: 100%;
+    width: 100%;
 }

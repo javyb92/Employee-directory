@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import API from "./utils/API";
+import EmployeeCard from "../components/EmployeeCard/EmployeeCard";
 
 
 class Employees extends Component {
@@ -17,12 +18,19 @@ class Employees extends Component {
       }
 
     render() {
-        // this.state.users
         return (
-            <ul>
-            { this.state.people.map(people => <li>{people.name.first}</li>)}
-          </ul>
-        )
+            <div>
+            { this.state.people.map(people => 
+            <EmployeeCard
+            firstName= {people.name.first} 
+            lastName={people.name.last} 
+            email={people.email} 
+            phone={people.phone}
+            image={people.picture.large}  />)}
+          
+          
+        </div>
+        );
     }
 }
 
