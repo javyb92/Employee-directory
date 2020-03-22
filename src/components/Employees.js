@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import API from "./utils/API";
 import EmployeeCard from "../components/EmployeeCard/EmployeeCard";
+// import Navbar from "./Navbar/Navbar.js"
 
 
 class Employees extends Component {
@@ -8,15 +9,36 @@ class Employees extends Component {
         people:[]
     }
 
+
+//API query, loads on startup of page
     componentDidMount() {
         API.getUsers()
         .then(res => {
             const people = res.data.results;
             this.setState({ people });
-            console.log(people)
+            // console.log(people)
           })
       }
 
+
+// sort by last name alphabetically (not working)
+    // sortAscending = () => {
+    //     const { people } = this.state;
+    //     people.sort(function(a, b){
+    //         if(a.lastName < b.lastName) { return -1; }
+    //         return 0;
+    //     })
+    //   }
+    
+    // sortDescending = () => {
+    //     const { people } = this.state;
+    //     people.sort(function(a, b){
+    //         if(a.lastName < b.lastName) { return 1; }
+    //         return 0;
+    //     })
+    //   }
+
+//EmployeeCard renders, variables matched up with results/map from the API query
     render() {
         return (
             <div>
